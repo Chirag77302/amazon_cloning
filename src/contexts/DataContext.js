@@ -62,13 +62,13 @@ export class DataProvider extends Component{
             added = data.filter((p) => (p));
         }
         else if(this.state.product_category===''){
-            added = data.filter((p) => (p.tagname === this.state.tagname));
+            added = data.filter((p) => (p.tagname.toLowerCase() === this.state.tagname.toLowerCase()));
         }
         else if(this.state.tagname === ''){
-            added = data.filter((p) => (p.product_category === this.state.product_category));
+            added = data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1));
         }
         else {
-            added = data.filter((p) => (p.product_category === this.state.product_category && p.tagname === this.state.tagname));
+            added = data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1 && p.tagname.toLowerCase() === this.state.tagname.toLowerCase()));
         }
 
         console.log(added);

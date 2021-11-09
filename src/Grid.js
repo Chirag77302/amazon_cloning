@@ -30,11 +30,11 @@ export default function NestedGrid() {
 
    const content = productRows.map((row, idx) => (
         <Grid container item xs={12} spacing={4}>
-             <React.Fragment>
-            { row.map( product => <Grid item xs={4} key={product}>
-                    <Product id={product.id} title={product.title} price={product.price} rating={product.rating} image={product.image} product_category={product.product_category} />
+             {/* <React.Fragment> */}
+            { row.map( product => <Grid item xs={4} key={product} style={{height:'inherit'}}>
+                    <Product id={product.id} title={product.title} price={product.price} rating={product.rating} image={product.image} product_category={product.product_category} rating_nos={product.rating_nos} />
                 </Grid> )}
-             </React.Fragment>
+             {/* </React.Fragment> */}
         </Grid> 
        )
    );

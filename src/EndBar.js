@@ -46,7 +46,10 @@ function EndBar(){
           [name]: event.target.value,
         });
       };
-
+      const style = {
+        color:'grey',
+        borderColor:'grey'
+      }
 
         return (
             <div className='EndBar'>
@@ -97,12 +100,12 @@ function EndBar(){
                     <Grid item xs={0} sm={2}></Grid>
                 </Grid>
 
-                <hr></hr>
+                <hr className="style-two"></hr>
 
                 <div className="ending_patah" style={{textAlign:'center'}}>
                     <img className="img_bottom" alt="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
                     <FormControl variant="outlined" className={classes2.formControl}  >
-                        <InputLabel htmlFor="outlined-age-native-simple" style={{color:"grey"}} ><LanguageIcon></LanguageIcon> Language</InputLabel>
+                        <InputLabel htmlFor="outlined-age-native-simple" style={style} ><i class="fas fa-globe"></i> English</InputLabel>
                         <Select
                         native
                         value={state.age}
@@ -114,13 +117,13 @@ function EndBar(){
                         }}
                         >
                         <option aria-label="None" value="" />
-                        <option value={10}>Ten</option>
-                        <option value={20}>Twenty</option>
-                        <option value={30}>Thirty</option>
+                        <option value={10}>Hindi</option>
+                        <option value={20}>Marathi</option>
+                        <option value={30}>Telugu</option>
+                        <option value={30}>Malyalam</option>
                         </Select>
                     </FormControl>
                     <Grid container spacing={3}>
-                        {/* <Grid item xs={0} sm={2}></Grid> */}
                         <Grid item xs={12} sm={12}>
                             <h5>Australia  Brazil  Canada  China  France  Germany  Italy  Japan  Mexico  Netharlands  Poland  Singapore  Spain  Turkey  United Arab Emirates  United</h5>
                             <h5>Kingdom  United States</h5>

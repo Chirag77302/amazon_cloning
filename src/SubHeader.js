@@ -116,7 +116,7 @@ function SubHeader() {
             </div>
 
             <div className="header__option">
-                <Button style={{color:'white'}}>BestSellers</Button>
+                <Button onClick={() => obj.handleClick('BestSellers')} style={{color:'white'}}>BestSellers</Button>
             </div>
 
             <div className="header__option">
@@ -131,13 +131,6 @@ function SubHeader() {
                 <Button  style={{color:'white'}}>Amazon Pay</Button>
             </div>
 
-            {/* <div className="header__optionBasket">
-                <ShoppingBasketIcon />
-                <span className="header__optionLineTwo header__basketCount">
-                0
-                </span>
-            </div> */}
-
             <div className="header__option">
                 <Button  style={{color:'white'}}>Today's Deals</Button>
             </div>
@@ -145,6 +138,10 @@ function SubHeader() {
             <div className="header__option">
                 <Button  style={{color:'white'}}>New Releases</Button>
             </div>
+
+             {/* <div className="header__optionBasket">
+                <img src='https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2021/img/Mobile_Traffic_/XCM_Manual_1321458_1651511_IN_3781247_400x39_en_IN._CB655944656_.jpg' style={{width:'50%'}} />
+            </div> */}
 
         </div>
 

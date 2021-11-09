@@ -1,8 +1,5 @@
 import React,{Component, useContext} from "react";
 import "./Header.css";
-// import SearchIcon from "@material-ui/icons/Search";
-// import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-// import Home from "./Home";
 import { DataContext } from "./contexts/DataContext";
 
 function  Header() {  
@@ -12,8 +9,8 @@ function  Header() {
                 <div className="left dflex">
                     <a href="" ><img className="logo" alt="logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/><span>.in</span></a>
                     <div className="item">
-                        <p><i className="fa fa-map-marker"></i> Hello,</p>
-                        <h5>Enter Your Address</h5>
+                        <p style={{fontSize:'14px'}} > Hello</p>
+                        <p style={{fontSize:'18px'}}><i className="fa fa-map-marker"></i><strong>Select Your Address</strong></p>
                     </div>
                 </div>
                 
@@ -35,14 +32,16 @@ function  Header() {
                         <i className="fa fa-flag"></i><i className="fa fa-sort-desc"></i>
                     </div>
                     <div className="item">
-                        <p>Hello,</p>
-                        <h5>Account & Lists<i className="fa fa-sort-desc"></i></h5>
+                        <p style={{fontSize:'14px'}} >Hello,</p>
+                        <p style={{fontSize:'18px'}} ><strong>Account & Lists</strong><i className="fa fa-sort-desc"></i></p>
                     </div>
                     <div className="item">
-                        <p>Refund</p>
-                        <h5>& Order</h5>
+                        <p style={{fontSize:'14px'}} >Refund</p>
+                        <p style={{fontSize:'18px'}} ><strong> & Order </strong> </p>
                     </div>
-                    <div className="item"><i className="fas fa-cart-plus fa-2x"></i>Cart</div>
+                    <div className="item">
+                        <i className="fas fa-cart-plus fa-2x"></i><strong>Cart</strong>
+                    </div>
                 </div>
             </nav>
 
