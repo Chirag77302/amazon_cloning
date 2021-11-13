@@ -2,14 +2,16 @@ import React from "react";
 import "./Product.css";
 import ReactImageMagnify from 'react-image-magnify';
 import ReactSlick from "react-slick";
+import { Link } from "react-router-dom";
+
 
 function Product({ id, title, image, price, rating,rating_nos }) {
   // const {
   //     rimProps,
   //     rsProps
   // } = this.props;
-
-  
+  const link = '/product/' +  id;
+  console.log(link);
   return (
     <div className="product">
         {/* <ReactSlick
@@ -62,7 +64,9 @@ function Product({ id, title, image, price, rating,rating_nos }) {
             <span className="oct-acs-pc-badge">DEAL OF THE DAY</span>
             <span className="oct-acs-pc-badge-skew"></span>
         </div>
-        <button className="basket_add" style={{float:'left'}} ><strong>Add to Basket</strong></button>
+        <Link exact to = {link} >
+          <button className="basket_add" style={{float:'left',cursor:'pointer'}} ><strong>Add to Basket</strong></button>
+        </Link>
       </div>
       
     </div>

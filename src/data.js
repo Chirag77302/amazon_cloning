@@ -2,7 +2,7 @@ import {v4 as uuidv4} from 'uuid';
 
 export const data = [
     {
-        "id":1,
+        "id":uuidv4(),
         "title":"Sony MDR-EX150AP Wired In Ear Headphone with Mic (Black)",
         "tagname":"earphones",
         "price":"1,005.00",
@@ -13,7 +13,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":2,
+        "id":uuidv4(),
         "title":"Sony EX155AP Wired In Ear Headphone with Mic (Black)",
         "price":"1,290.00",
         "tagname":"earphones",
@@ -24,7 +24,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":3,
+        "id":uuidv4(),
         "title":"Sony Bravia 80 cm (32 inches) HD Ready Smart LED TV 32W6103 (Black)",
         "price":"25,490.00",
         "tagname":"Television",
@@ -35,7 +35,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":4,
+        "id":uuidv4(),
         "title":"Panasonic 6 Kg 5 Star Fully-Automatic Top Loading Washing Machine (NA-F60LF1HRB, Grey)",
         "tagname":"Washing Machine",
         "price":"13,390.00",
@@ -46,7 +46,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":5,
+        "id":uuidv4(),
         "title":"Redmi 9 (Sky Blue, 4GB RAM, 64GB Storage) | 2.3GHz Mediatek Helio G35 Octa core Processor",
         "tagname":"Phone",
         "price":"8,499.00",
@@ -57,7 +57,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":6,
+        "id":uuidv4(),
         "title":"Vivo Y33s (Mirror Black, 8GB RAM, 128GB Storage)",
         "tagname":"Phone",
         "Company":"Vivo",
@@ -68,7 +68,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":7,
+        "id":uuidv4(),
         "title":"Lloyd 7 kg Semi Automatic Top Load Washing Machine (LWMS70BE1, Blossom Blue)",
         "tagname":"Washing Machine",
         "Company":"Lloyd",
@@ -79,7 +79,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":8,
+        "id":uuidv4(),
         "tagname":"Television",
         "title":"WA65A4002VS/TL",
         "image":"https://m.media-amazon.com/images/I/81N8UlFd0kL._SX522_.jpg",
@@ -90,7 +90,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":9,
+        "id":uuidv4(),
         "title":"Raymond Men's Regular fit Casual Shirt",
         "tagname":"Shirt",
         "Company":"Raymond",
@@ -101,7 +101,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":10,
+        "id":uuidv4(),
         "tagname":"shirt",
         "title":"Men's Regular fit Casual Shirt",
         "Company":"Indigo Nation",
@@ -112,7 +112,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":11,
+        "id":uuidv4(),
         "title":"Raymond Men's Slim Shirt",
         "rating":"5",
         "tagname":"shirt",
@@ -123,7 +123,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":12,
+        "id":uuidv4(),
         "title":"Reebok Men's RBK ESN PRO Regular Fit Pant",
         "tagname":"pants",
         "Company":"Reebok",
@@ -134,7 +134,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":13,
+        "id":uuidv4(),
         "tagname":"pants",
         "title":"Reebok Casual Regular Men's Pants",
         "Company":"Levi's",
@@ -145,7 +145,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":14,
+        "id":uuidv4(),
         "tagname":"shirt",
         "title":"IndoPrimo Men's Regular Fit Casual Shirt",
         "Company":"Indigo Nation",
@@ -156,7 +156,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":"12321341",
+        "id":uuidv4(),
         "title":"The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback",
         "price":"11.96",
         "tagname":"book",
@@ -167,7 +167,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":"49538094",
+        "id":uuidv4(),
         "title":"Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater",
         "tagname":"mixer",
         "price":"239.0",
@@ -178,7 +178,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":"4903850",
+        "id":uuidv4(),
         "title":"Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor",
         "tagname":"watch",
         "price":"199.99",
@@ -188,7 +188,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":"23445930",
+        "id":uuidv4(),
         "title":"Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric",
         "tagname":"speaker",
         "price":"98.99",
@@ -198,7 +198,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":"3254354345",
+        "id":uuidv4(),
         "title":"New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)",
         "tagname":"Phone",
         "price":"598.99",
@@ -208,7 +208,7 @@ export const data = [
         "rating_nos":"200"
     },
     {
-        "id":"90829332",
+        "id":uuidv4(),
         "title":"Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor",
         "price":"1094.98",
         "tagname":"Television",
