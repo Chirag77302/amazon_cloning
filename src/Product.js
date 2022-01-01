@@ -1,52 +1,16 @@
 import React from "react";
 import "./Product.css";
-import ReactImageMagnify from 'react-image-magnify';
-import ReactSlick from "react-slick";
+// import ReactImageMagnify from 'react-image-magnify';
+// import ReactSlick from "react-slick";
 import { Link } from "react-router-dom";
 
 
 function Product({ id, title, image, price, rating,rating_nos }) {
-  // const {
-  //     rimProps,
-  //     rsProps
-  // } = this.props;
+
   const link = '/product/' +  id;
   console.log(link);
   return (
     <div className="product">
-        {/* <ReactSlick
-                {...{
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }}
-                {...rsProps}
-            >
-                {dataSource.map((src, index) => (
-                    <div key={index}>
-                        <ReactImageMagnify
-                            {...{
-                                smallImage: {
-                                    alt: 'Wristwatch by Versace',
-                                    isFluidWidth: true,
-                                    src: src.small,
-                                    srcSet: src.srcSet,
-                                    sizes: '(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px'
-                                },
-                                largeImage: {
-                                    src: src.large,
-                                    width: 1426,
-                                    height: 2000
-                                },
-                                lensStyle: { backgroundColor: 'rgba(0,0,0,.6)' }
-                            }}
-                            {...rimProps}
-                        />
-                    </div>
-                ))}
-          </ReactSlick> */}
         <img src={image} alt="" />
 
       <div className="product_infoo">

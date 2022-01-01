@@ -74,7 +74,6 @@ function SubHeader() {
     );
     
     const obj = useContext(DataContext);
-    // console.log(obj);
   return (
     <div className="header" style={{backgroundColor:"#232f3e"}} >
                     
@@ -138,11 +137,7 @@ function SubHeader() {
             <div className="header__option">
                 <Button  style={{color:'white'}}>New Releases</Button>
             </div>
-
-             {/* <div className="header__optionBasket">
-                <img src='https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2021/img/Mobile_Traffic_/XCM_Manual_1321458_1651511_IN_3781247_400x39_en_IN._CB655944656_.jpg' style={{width:'50%'}} />
-            </div> */}
-
+            
         </div>
 
     </div>

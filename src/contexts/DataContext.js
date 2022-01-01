@@ -1,9 +1,9 @@
 import React,{Component} from "react";
 import { createContext } from "react";
-import { data } from "../data";
+import axios from 'axios';
 
 export const DataContext = createContext();
-console.log(data);
+var d = [];
 
 export class DataProvider extends Component{
     constructor(props){
@@ -11,7 +11,7 @@ export class DataProvider extends Component{
         this.state = {
             product_category:"",
             tagname:"",
-            products:data.map((p)=>(p))
+            products:[]
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -19,21 +19,17 @@ export class DataProvider extends Component{
         this.updateState = this.updateState.bind(this);
     }
 
+    async componentDidMount(){
+        d = await axios.get('/api/');
+        console.log(d);
+        this.setState({
+            products:d.data.map((p)=>(p))
+        })
+    }
+
     handleSubmit(e){
         e.preventDefault();
         this.updateState();
-        // let added = [];
-        // try{
-        //         e.preventDefault();
-        //         const res = await fetch('data.json');
-        //         const x = await res.json();
-        //         console.log(x.data);
-        //         for(var i=0;i<x.data.length;i++){
-        //             if(x.data[i].Company ===this.state.product_category && x.data[i].title === this.state.tagname)added.push({name:x.data[i].title,id:x.data[i].id});
-        //         }
-        //     }catch(error){
-        //         console.log(error);
-        //     }
     }
 
     handleChange(evt){
@@ -46,35 +42,37 @@ export class DataProvider extends Component{
         // value.toLowerCase();
         // console.log(value);
         // console.log(this.state.products);
+        // <Redirect to='/'></Redirect>
+
         this.setState({
             tagname:"",
             product_category:value,
             products:[]
         },() => this.updateState());
 
-        // this.handleSubmit();
     }
 
     updateState(){
         let added = [];
+
         // e.preventDefault();
         if(this.state.product_category === '' && this.state.tagname===''){
-            added = data.filter((p) => (p));
+            added = d.data.filter((p) => (p));
         }
         else if(this.state.product_category===''){
-            added = data.filter((p) => (p.tagname.toLowerCase() === this.state.tagname.toLowerCase()));
+            added = d.data.filter((p) => (p.tagname.indexOf(this.state.tagname.toLowerCase())>-1));
         }
         else if(this.state.tagname === ''){
-            added = data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1));
+            added = d.data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1));
         }
         else {
-            added = data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1 && p.tagname.toLowerCase() === this.state.tagname.toLowerCase()));
+            added = d.data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1 && p.tagname.indexOf(this.state.tagname.toLowerCase())>-1));
         }
 
-        console.log(added);
+        console.log("added products are : ",  added);
         this.setState({
             products:[...added],
-        },() => {console.log(this.state)});
+        },() => {console.log('current state is ',this.state)});
     }
 
     render(){

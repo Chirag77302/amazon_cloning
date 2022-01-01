@@ -8,18 +8,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 // import NativeSelect from '@material-ui/core/NativeSelect';
 import './Endbar.css';
-import LanguageIcon from '@material-ui/icons/Language';
+// import LanguageIcon from '@material-ui/icons/Language';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
 
 const useStyles2 = makeStyles((theme) => ({
     formControl: {
@@ -32,7 +22,7 @@ const useStyles2 = makeStyles((theme) => ({
   }));
 
 function EndBar(){
-    const classes = useStyles();
+    // const classes = useStyles();
     const classes2 = useStyles2();
     const [state, setState] = React.useState({
         age: '',
@@ -88,13 +78,13 @@ function EndBar(){
 
                     <Grid item xs={12} sm={2}>
                         <ul className="list">
-                            <h4>Make Money with Us</h4>
-                            <li>Sell On Amazon</li>
-                            <li>Sell Under Amazon Aceelerator</li>
-                            <li>Become an Affiliate</li>
-                            <li>Fulfillment by Amazon</li>
-                            <li>Advertise Your Products</li>
-                            <li>Amazon Pay on Merchants</li>
+                            <h4>Let Us Help You</h4>
+                            <li>COVID-19 and Amazon</li>
+                            <li>Your Account</li>
+                            <li>Returns Centre</li>
+                            <li>100% Purchase Protection</li>
+                            <li>Amazon Assistant Download</li>
+                            <li>Help</li>
                         </ul>
                     </Grid>
                     <Grid item xs={0} sm={2}></Grid>

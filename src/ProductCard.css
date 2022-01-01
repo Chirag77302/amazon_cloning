@@ -1,3 +1,6 @@
+/* @import "~slick-carousel/slick/slick.css";  */
+/* @import "~slick-carousel/slick/slick-theme.css"; */
+
 .product_card{
     /* height: inherit; */
     /* width: inherit; */
@@ -59,7 +62,7 @@ hr.style-three {
 
 .li_content{
     color: black;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -83,7 +86,7 @@ hr.style-three {
 }
 
 .end_para{
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
 }
 

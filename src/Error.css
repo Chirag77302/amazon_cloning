@@ -1,0 +1,22 @@
+
+.Error_heading{
+    font-size: 350px;
+}
+
+.error_subheading{
+    font-size: 70px;
+}
+
+.error_button{
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+}
+
+.error_link{
+    color: white;
+    outline: none;
+}

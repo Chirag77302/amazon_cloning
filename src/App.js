@@ -8,6 +8,7 @@ import EndBar from './EndBar';
 import FinalBar from './FinalBar';
 import { Route,Switch } from 'react-router';
 import ProductCard from './ProductCard';
+import Error from './Error';
 
 function App() {
   return (
@@ -16,14 +17,12 @@ function App() {
           <DataProvider>
                 <Header />
                 <SubHeader />
-            <Route exact path="/" >
-                <Home />
+            <Route exact path="/" ><Home /></Route>
+            <Route exact path="/product/:id" render={routeProps => (<ProductCard {...routeProps} />)} ></Route>
+            <Route path='/error' render={routeProps => (<Error />)} ></Route>
                 <EndBar />
                 <FinalBar />
-            </Route>
-            <Route exact path="/product/:id" render={routeProps => (<ProductCard {...routeProps} />)} ></Route>
           </DataProvider>
-          <Route  render={routeProps => <div>Not Found</div>} ></Route>
       </Switch>
     </div>
   );

@@ -2,13 +2,8 @@ import React from "react";
 import "./Home.css";
 import NestedGrid from "./Grid";
 import Carousel from 'react-material-ui-carousel';
-import { Paper, Button } from '@material-ui/core';
-
 
 function Home() {
-  // const style = {
-  //   maskImage:'linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))'
-  // }
 
   const items = [
       {
@@ -43,7 +38,7 @@ function Home() {
                 src={item.image}
                 alt=""/>
                ))} 
-         </Carousel> 
+        </Carousel> 
 
         <NestedGrid />
         

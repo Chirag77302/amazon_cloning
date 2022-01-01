@@ -1,6 +1,6 @@
 
   .header {
-    height: 50px;
+    height: 45px;
     display: flex;
     align-items: center;
     background-color: #131921;
@@ -70,7 +70,7 @@
   }
 
   .header__option Button {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     text-transform: none;
   }
 
