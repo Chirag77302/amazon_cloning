@@ -1,7 +1,5 @@
 import React from "react";
 import "./Product.css";
-// import ReactImageMagnify from 'react-image-magnify';
-// import ReactSlick from "react-slick";
 import { Link } from "react-router-dom";
 
 
@@ -22,7 +20,7 @@ function Product({ id, title, image, price, rating,rating_nos }) {
             {[...Array(parseInt(rating,10))].map(star => {
               return <i className="fa fa-star starcheck"></i>
             })}
-            <p className="number_of_ratings">{rating_nos} ratings</p>
+            <p className="number_of_rating">{rating_nos} ratings</p>
         </div>
         <div style={{textAlign:'start'}}>
             <span className="oct-acs-pc-badge">DEAL OF THE DAY</span>

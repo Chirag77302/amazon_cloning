@@ -55,7 +55,6 @@
 hr.style-three {
     border: 0;
     height: 1px;
-    margin-top: -8px;
     margin-bottom: 20px;
     background-image: linear-gradient(to right, #D5DBDB, #D5DBDB , #D5DBDB);
 }

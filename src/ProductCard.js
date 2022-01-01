@@ -9,6 +9,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Redirect } from "react-router";
 import { DataContext } from "./contexts/DataContext";
+import { typography } from '@material-ui/system';
+// import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -104,13 +106,44 @@ function ProductCard(props){
                                         </ul>
                                     </div>
                                     <div className="product_buttons">
-                                        <div className='card_buttons'><img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-cod._CB485937110_.png' alt="Pay on Delivery" ></img></div>
-                                        <div className='card_buttons'><img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png' alt="7 days replacement"></img></div>
-                                        <div className='card_buttons'><img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB485933725_.png' alt="Amazon Delivered"></img></div>
-                                        <div className='card_buttons'><img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png' alt="1 Year Warranty"></img></div>
+                                        <div className='card_buttons'>
+                                            <img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-cod._CB485937110_.png' alt="Pay on Delivery" ></img>
+                                            <typography>
+                                                <div align={'center'}>
+                                                    <p style={{'color':'#007185'}} >Pay On</p> 
+                                                    <p style={{'color':'#007185'}}>Delivery</p>
+                                                </div>
+                                            </typography>
+                                        </div>
+                                        <div className='card_buttons'>
+                                            <img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png' alt="7 days replacement"></img>
+                                            <typography>
+                                                <div align={'center'}>
+                                                    <p style={{'color':'#007185'}}>Returnable</p>
+                                                </div>
+                                            </typography>
+                                        </div>
+                                        <div className='card_buttons'>
+                                            <img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB485933725_.png' alt="Amazon Delivered"></img>
+                                            <typography>
+                                                <div align={'center'}>
+                                                    <p style={{'color':'#007185'}}>Amazon</p>
+                                                    <p style={{'color':'#007185'}}>Delivered</p>
+                                                </div>
+                                            </typography>
+                                        </div>
+                                        <div className='card_buttons'>
+                                            <img src='https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png' alt="1 Year Warranty"></img>
+                                            <typography>
+                                                <div align={'center'}>
+                                                    <p style={{'color':'#007185'}}>No-Contact</p>
+                                                    <p style={{'color':'#007185'}}> Delivery</p>
+                                                </div>
+                                            </typography>
+                                        </div>
                                     </div>
-                                    <hr className="style-three"></hr>
                                 </div>
+                                <hr className="style-three"></hr>
                             </Paper>
                         </Grid>
                         <Grid item xs={12} sm={2}>

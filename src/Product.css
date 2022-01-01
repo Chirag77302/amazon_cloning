@@ -15,6 +15,7 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    border-radius: 10px;
   }
   
   .product__rating {
@@ -33,6 +34,7 @@
     margin-right: 15px;
     padding: 5px;
     border: 1px solid #E0E0E0;
+    border-radius: 50px;
     cursor: pointer;
     /* background-image: radial-gradient(0% , 100% ,rgba(0,0,0,0,0.00) 0%,rgba(0,0,0,0,03) 100%); */
   }
@@ -67,12 +69,6 @@
     flex-direction: column;
   }
 
-  .number_of_ratings{
-    font-size: 10px;
-    color: #565959;
-    margin-left: 5px;
-  }
-
   .oct-acs-pc-badge{
     font-size: 12px !important;
     color: #FFF;
@@ -94,3 +90,11 @@
     position: absolute;
   }
 
+  
+.number_of_rating {
+  font-size: 14px;
+  font-weight: 500;
+  /* line-height: 20px; */
+  color: #007185;
+  margin-left: 4px;
+}
