@@ -23,8 +23,7 @@ export default function NestedGrid() {
    const obj = useContext(DataContext);
    const rows = [...Array( Math.ceil(obj.state.products.length / 3) )];
    const productRows = rows.map( (row, idx) => obj.state.products.slice(idx * 3, idx * 3 + 3) );
-  //  console.log('product rows are : ',  productRows);
-
+  
       const content = productRows.map((row, idx) => (
         <Grid container item xs={12} spacing={4}>
              <React.Fragment>
