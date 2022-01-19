@@ -35,10 +35,9 @@ export default function NestedGrid() {
        )
    );
 
-
   return (
     <div className={classes.root} style={{width:"inherit"}}>
-      {obj.state.products.length === 0?<h1>No Items Found !</h1>:  content }
+      {obj.state.products.length===0?<h1>No Items Found !</h1>:content}
     </div>
   );
 }

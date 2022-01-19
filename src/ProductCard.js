@@ -9,7 +9,6 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Redirect } from "react-router";
 import { DataContext } from "./contexts/DataContext";
-import { typography } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {

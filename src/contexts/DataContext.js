@@ -4,6 +4,7 @@ import axios from 'axios';
 
 export const DataContext = createContext();
 var d = [];
+// console.log('entered');
 
 export class DataProvider extends Component{
     constructor(props){
@@ -11,7 +12,8 @@ export class DataProvider extends Component{
         this.state = {
             product_category:"",
             tagname:"",
-            products:[]
+            products:[],
+            isloading:true
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -20,10 +22,11 @@ export class DataProvider extends Component{
     }
 
     async componentDidMount(){
-        d = await axios.get('/api/');
-        console.log(d);
+        d = await axios.get('https://guarded-peak-43217.herokuapp.com/api/');
+        // console.log('d is : ',d);
         this.setState({
-            products:d.data.map((p)=>(p))
+            products:d.data.map((p)=>(p)),
+            isloading:false
         })
     }
 
@@ -38,37 +41,34 @@ export class DataProvider extends Component{
         });
     }
 
+    updateStatebtn(){
+
+        let added = [];
+        if(this.state.product_category === '')added = d.data.filter((p) => (p));
+        else added = d.data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1));
+        console.log("added products are : ",  added);
+        this.setState({
+            products:[...added],
+        },() => {console.log('current state is ',this.state)});
+
+    }
+
     handleClick(value){
         // value.toLowerCase();
         // console.log(value);
         // console.log(this.state.products);
         // <Redirect to='/'></Redirect>
-
         this.setState({
             tagname:"",
             product_category:value,
             products:[]
-        },() => this.updateState());
+        },() => {this.updateStatebtn()});
 
     }
 
     updateState(){
         let added = [];
-
-        // e.preventDefault();
-        if(this.state.product_category === '' && this.state.tagname===''){
-            added = d.data.filter((p) => (p));
-        }
-        else if(this.state.product_category===''){
-            added = d.data.filter((p) => (p.tagname.indexOf(this.state.tagname.toLowerCase())>-1));
-        }
-        else if(this.state.tagname === ''){
-            added = d.data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1));
-        }
-        else {
-            added = d.data.filter((p) => (p.product_category.indexOf(this.state.product_category)>-1 && p.tagname.indexOf(this.state.tagname.toLowerCase())>-1));
-        }
-
+        added = d.data.filter((p) => (p.tagname.indexOf(this.state.tagname.toLowerCase())>-1));    
         console.log("added products are : ",  added);
         this.setState({
             products:[...added],

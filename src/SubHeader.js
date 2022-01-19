@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-// import SearchIcon from "@material-ui/icons/Search";
-// import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Drawer } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import clsx from 'clsx';
@@ -12,7 +10,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-// import { withThemeCreator } from "@material-ui/styles";
 import MenuIcon from '@material-ui/icons/Menu';
 import './Subheader.css';
 import { DataContext } from "./contexts/DataContext";
@@ -35,6 +32,9 @@ function SubHeader() {
         bottom: false,
         right: false,
     });
+    // redux compo
+    // product cate. and windows loac.
+
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -54,7 +54,7 @@ function SubHeader() {
         onKeyDown={toggleDrawer(anchor, false)}
         >
         <List>
-            {['Laptops', 'Clothing', 'Television', 'Earphones','Washing Machine'].map((text, index) => (
+            {['Electronics', 'Fashion', 'Washing Machines', 'Books','Best Sellers'].map((text, index) => (
             <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
@@ -111,11 +111,11 @@ function SubHeader() {
             </div>
             
             <div className="header__option">
-                <Button style={{color:'white'}}>Mobiles</Button>
+                <Button onClick={() => obj.handleClick('BestSellers')} style={{color:'white'}}>BestSellers</Button>
             </div>
 
             <div className="header__option">
-                <Button onClick={() => obj.handleClick('BestSellers')} style={{color:'white'}}>BestSellers</Button>
+                <Button style={{color:'white'}}>Mobiles</Button>
             </div>
 
             <div className="header__option">

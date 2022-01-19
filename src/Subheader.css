@@ -70,13 +70,13 @@
   }
 
   .header__option Button {
-    font-size: 1.0rem;
+    font-size: 1rem;
     text-transform: none;
   }
 
   .header__option Button:hover {
-    border: 1px solid white;
-  }
+     border: 1px solid white; 
+   }
 
   input:focus{
       outline: none;
